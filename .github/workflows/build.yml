@@ -1,4 +1,5 @@
 name: Build and Push Images
+
 on:
   workflow_dispatch:
 
@@ -9,16 +10,13 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - service: nginx
-            dockerfile: ./Dockerfile
+          - dockerfile: ./Dockerfile
             context: nginx
             image: spg51/nginx
-          - service: php
-            dockerfile: ./Dockerfile
+          - dockerfile: ./Dockerfile
             context: html
             image: spg51/html
-          - service: mysql
-            dockerfile: ./Dockerfile
+          - dockerfile: ./Dockerfile
             context: mysql
             image: spg51/mysql
 
