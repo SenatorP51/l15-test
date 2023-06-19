@@ -10,16 +10,16 @@ jobs:
       matrix:
         include:
           - service: nginx
-            dockerfile: ./nginx/Dockerfile
-            context: ./nginx
+            dockerfile: ./Dockerfile
+            context: nginx
             image: spg51/nginx
           - service: php
-            dockerfile: ./html/Dockerfile
-            context: ./html
+            dockerfile: ./Dockerfile
+            context: html
             image: spg51/html
           - service: mysql
-            dockerfile: ./mysql/Dockerfile
-            context: ./mysql
+            dockerfile: ./Dockerfile
+            context: mysql
             image: spg51/mysql
 
     steps:
